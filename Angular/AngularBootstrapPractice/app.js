@@ -11,6 +11,7 @@
         name: 'Dodecahedron',
         price: 2.95,
         description: 'blah dee blah',
+        specifications: 'None yet',
         canPurchase: false,
         soldOut: true,
         images: [
@@ -36,6 +37,7 @@
         name: "Pentagonal Gem",
         price: 5.95,
         description: "pretty",
+        specifications: 'None',
         canPurchase: true,
         soldOut: false,
         images: [
@@ -82,5 +84,11 @@
 
     });
 
+    app.directive('productTitle', function () {
+        return {
+            restrict: 'E', //new element
+            templateUrl: 'product-title.html'
+        };
+    });
 })();
 

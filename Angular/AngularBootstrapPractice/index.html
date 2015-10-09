@@ -14,8 +14,7 @@
     <div ng-controller="StoreController as store">
         <div ng-repeat="product in store.products">
             <div class="row">
-                <h3>{{product.name}}</h3>
-                <em class="pull-right">{{product.price | currency}}</em>
+                <h3 ng-include="'product-title.html'"></h3> <!--does AJAX request when needed-->
                 <img ng-src="{{product.images[0].thumb}}" />
             </div>
 
@@ -38,14 +37,14 @@
                 </div>
                 <div class="panel" ng-show="panel.isSelected(2)">
                     <h4>Specifications</h4>
-                    <blockquote>None yet</blockquote>
+                    <blockquote>{{product.specifications}}</blockquote>
                 </div>
                 <div class="panel" ng-show="panel.isSelected(3)">
                     <h4>Reviews</h4>
                     <blockquote ng-repeat="review in product.reviews">
-                        <strong>Stars: {{reviewCtrl.review.stars}}</strong>
-                        {{reviewCtrl.review.body}}
-                        <cite>-{{reviewCtrl.review.author}}</cite>
+                        <strong>Stars: {{review.stars}}</strong>
+                        {{review.body}}
+                        <cite>-{{review.author}}</cite>
                     </blockquote>
 
                     <!--  New Review Form -->
@@ -79,5 +78,7 @@
             </section>
         </div>
     </div>
+
+    <product-title>    </product-title>
 </body>
 </html>

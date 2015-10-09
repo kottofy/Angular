@@ -75,6 +75,7 @@
     <Content Include="images\thumb.png" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
+    <Content Include="product-title.html" />
     <Content Include="Scripts\Angular\version.json" />
     <Content Include="Scripts\Angular\errors.json" />
     <Content Include="Scripts\Angular\angular.min.js.map" />
