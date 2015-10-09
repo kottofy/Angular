@@ -2,37 +2,21 @@
 <html ng-app="store">
 <head>
     <title>Angular Bootstrap Practice</title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="Bootstrap/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="app.js"></script>
 </head>
-<body class="container" > <!--only controller properties are accessible in this div-->
+<body class="container">
+    <!--only controller properties are accessible in this div-->
     <div ng-controller="StoreController as store">
         <div ng-repeat="product in store.products">
-            <div ng-hide="product.soldOut">
-                <!-- or ng-show="!store.product.soldOut"-->
-                <h1>{{product.name}}</h1>
-                <h2>${{product.price}}</h2>
-                <p>{{product.description}}</p>
-                <button ng-show="product.canPurchase">Add to cart</button>
+            <div class="row">
+                <h3>{{product.name}}</h3>
+                <em class="pull-right">{{product.price | currency}}</em>
+                <img ng-src="{{product.images[0].thumb}}" />
             </div>
-
-
-            <ul class="list-group">
-                <li class="list-group-item" ng-repeat="product in store.products | orderBy:'-price'">
-                    <!-- minus is desc order-->
-                    <h3>
-                        {{product.name}}
-                        <em class="pull-right">{{product.price | currency}}</em>
-                        <img ng-src="{{product.images[0].thumb}}" />
-                    </h3>
-                </li>
-                <li class="small-image pull-left thumbnail" ng-repeat="image in products.images">
-                    <img ng-src="{{image}}" />
-                </li>
-            </ul>
 
             <section ng-controller="PanelController as panel">
                 <ul class="nav nav-pills">
@@ -62,8 +46,9 @@
                         {{reviewCtrl.review.body}}
                         <cite>-{{reviewCtrl.review.author}}</cite>
                     </blockquote>
-                    <!--  Review Form -->
-                    <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
+
+                    <!--  New Review Form -->
+                    <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)" novalidate>
                         <!--  Live Preview -->
                         <blockquote>
                             <strong>{{reviewCtrl.review.stars}} Stars</strong>
@@ -74,16 +59,17 @@
                         <!--  Review Form -->
                         <h4>Submit a Review</h4>
                         <fieldset class="form-group">
-                            <select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
+                            <select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars" required>
                                 <option value="">Rate the Product</option>
                             </select>
                         </fieldset>
                         <fieldset class="form-group">
-                            <textarea ng-model="reviewCtrl.review.body" class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
+                            <textarea ng-model="reviewCtrl.review.body" class="form-control" placeholder="Write a short review of the product..." title="Review" required></textarea>
                         </fieldset>
                         <fieldset class="form-group">
-                            <input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
+                            <input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" required />
                         </fieldset>
+                        <div>reviewForm is {{reviewForm.$valid}}</div>
                         <fieldset class="form-group">
                             <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
                         </fieldset>
