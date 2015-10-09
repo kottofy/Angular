@@ -70,6 +70,7 @@
     <Content Include="Bootstrap\js\bootstrap.js" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
     <Content Include="Bootstrap\js\npm.js" />
+    <Content Include="css\style.css" />
     <Content Include="images\full.png" />
     <Content Include="images\thumb.png" />
     <Content Include="index.html" />
