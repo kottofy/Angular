@@ -79,6 +79,7 @@
     <Content Include="product-gallery.html" />
     <Content Include="product-panels.html" />
     <Content Include="product-title.html" />
+    <Content Include="products.js" />
     <Content Include="Scripts\Angular\version.json" />
     <Content Include="Scripts\Angular\errors.json" />
     <Content Include="Scripts\Angular\angular.min.js.map" />
@@ -98,6 +99,7 @@
     <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="store-products.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

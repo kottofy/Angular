@@ -1,10 +1,18 @@
-﻿
-(function () {
-    var app = angular.module('store', []);
+﻿(function () {
+    var app = angular.module('store', ['store-products']);
 
-    app.controller('StoreController', function () {
+    //app.controller('SomeController', ['$http', '$log', function ($http, $log) { }]);
+
+    app.controller('StoreController', ['$http', function ($http) {
         this.products = gems;
-    });
+
+        //var store = this;
+
+        //$http.get('/store-products.json').success(function (data) {
+        //    store.products = data;
+        //});
+
+    }]);
 
     var gems = [
     {
@@ -27,7 +35,7 @@
                 author: "joe@thomas.com"
             },
             {
-                stars: 1,       
+                stars: 1,
                 body: "This product sucks",
                 author: "tim@hater.com"
             }
@@ -58,11 +66,8 @@
                     author: "bananas@lover.com"
                 }
         ]
-    
     }
-     ]
-
-
+    ]
 
     app.controller('ReviewController', function () {
         this.review = {};
@@ -73,52 +78,6 @@
             this.review = {};
         };
 
-    });
-
-    app.directive('productTitle', function () {
-        return {
-            restrict: 'E', //new element
-            templateUrl: 'product-title.html'
-        };
-    });
-
-    //app.directive('productGallery', function () {
-    //    return {
-    //        restrict: 'E', //new element
-    //        templateUrl: 'product-gallery.html',
-    //        controller: function () {
-    //            this.current = 0;
-    //            this.setCurrent = function (imageNumber) {
-    //                this.current = imageNumber || 0;
-    //            };
-    //        },
-    //        controllerAs: 'gallery'
-    //    };
-    //});
-
-    app.directive('productDescription', function () {
-        return {
-            restrict: 'E', //new element
-            templateUrl: 'product-description.html'
-        };
-    });
-
-    app.directive('productPanels', function () {
-        return {
-            restrict: 'E', //new element
-            templateUrl: 'product-panels.html',
-            controller: function () {
-                this.tab = 1;
-
-                this.selectTab = function (setTab) {
-                    this.tab = setTab;
-                };
-                this.isSelected = function (checkTab) {
-                    return this.tab === checkTab;
-                };
-            },
-            controllerAs: 'panels'
-        };
     });
 
 })();
