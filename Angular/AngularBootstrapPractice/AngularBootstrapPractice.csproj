@@ -70,6 +70,8 @@
     <Content Include="Bootstrap\js\bootstrap.js" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
     <Content Include="Bootstrap\js\npm.js" />
+    <Content Include="images\full.png" />
+    <Content Include="images\thumb.png" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\Angular\version.json" />
