@@ -172,7 +172,7 @@ TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 #@author: Kristin Ottofy
 # Use local_settings.py -- not uploaded to Git!
 try:
-    from SearchApp.local_settings import *
+    from AngularPythonTwitterSearch.local_settings import *
 except Exception as e:
     print(e)
     pass
