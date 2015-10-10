@@ -95,6 +95,7 @@
     <Content Include="js\controllers.js" />
     <Content Include="js\oauth.js" />
     <Content Include="js\services.js" />
+    <Content Include="py\search_twitter.py" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
