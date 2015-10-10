@@ -67,12 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="js\bootstrap\css\bootstrap-theme.css.map" />
-    <Content Include="js\bootstrap\css\bootstrap.css.map" />
-    <Content Include="js\bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="js\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="js\bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="js\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="frameworks\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="frameworks\bootstrap\css\bootstrap.css.map" />
+    <Content Include="frameworks\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="frameworks\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="frameworks\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="frameworks\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -81,15 +81,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="forms\searchform.html" />
     <Content Include="index.html" />
-    <Content Include="js\bootstrap\css\bootstrap-theme.css" />
-    <Content Include="js\bootstrap\css\bootstrap-theme.min.css" />
-    <Content Include="js\bootstrap\css\bootstrap.css" />
-    <Content Include="js\bootstrap\css\bootstrap.min.css" />
-    <Content Include="js\bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="js\bootstrap\js\bootstrap.js" />
-    <Content Include="js\bootstrap\js\bootstrap.min.js" />
-    <Content Include="js\bootstrap\js\npm.js" />
+    <Content Include="frameworks\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="frameworks\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="frameworks\bootstrap\css\bootstrap.css" />
+    <Content Include="frameworks\bootstrap\css\bootstrap.min.css" />
+    <Content Include="frameworks\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="frameworks\bootstrap\js\bootstrap.js" />
+    <Content Include="frameworks\bootstrap\js\bootstrap.min.js" />
+    <Content Include="frameworks\bootstrap\js\npm.js" />
+    <Content Include="js\app.js" />
+    <Content Include="js\controllers.js" />
+    <Content Include="js\oauth.js" />
+    <Content Include="js\services.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

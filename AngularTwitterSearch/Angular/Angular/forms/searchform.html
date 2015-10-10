@@ -1,0 +1,15 @@
+﻿<form name="searchForm" ng-controller="FormController as formy" ng-submit="searchForm.$valid && form.setQuery(query)" novalidate>
+
+    <!--  Search Form -->
+    <fieldset class="form-group">
+        <textarea ng-model="formy.query" class="form-control" placeholder="" title="Search" required></textarea>
+    </fieldset>
+    <fieldset class="form-group">
+        <input type="submit" class="btn btn-primary pull-right" value="Search!" />
+    </fieldset>
+
+    <!--  Live Preview -->
+    <blockquote>
+        <strong>{{formy.query}}</strong>
+    </blockquote>
+</form>
