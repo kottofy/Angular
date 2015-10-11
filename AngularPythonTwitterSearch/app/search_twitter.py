@@ -1,4 +1,4 @@
-from AngularPythonTwitterSearch.settings import *
+﻿from AngularPythonTwitterSearch.settings import *
 import oauth2 as oauth
 import json
 
@@ -12,7 +12,7 @@ def auth_twitter():
     access_token = oauth.Token(key=ACCESS_KEY, secret=ACCESS_SECRET)
     client = oauth.Client(consumer, access_token)
 
-    timeline_endpoint = "https://api.twitter.com/1.1/statuses/home_timeline.json"
+    timeline_endpoint = "https://api.twitter.com/1.1/search/tweets.json?q=banana"
     response, data = client.request(timeline_endpoint)
 
     tweets = json.loads(data.decode(encoding='UTF-8'))

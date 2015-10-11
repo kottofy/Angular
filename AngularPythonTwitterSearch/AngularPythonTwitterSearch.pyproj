@@ -32,6 +32,7 @@
     <Compile Include="AngularPythonTwitterSearch\local_settings.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="app\watson.py" />
     <Compile Include="app\forms.py" />
     <Compile Include="app\models.py" />
     <Compile Include="app\search_twitter.py">

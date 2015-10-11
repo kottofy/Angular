@@ -7,9 +7,12 @@ from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
 from app.search_twitter import auth_twitter
+from app.watson import get_sentiment_analysis
 
 def home(request):
     tweets = auth_twitter()
+    scores = get_sentiment_analysis(tweets['statuses'][0]['text'])
+
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
     return render(
@@ -18,6 +21,7 @@ def home(request):
         context_instance = RequestContext(request,
         {
             'tweets': tweets,
+            'scores' : scores,
             'title':'Home Page',
             'year':datetime.now().year,
         })
