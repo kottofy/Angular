@@ -15,15 +15,18 @@
 
 <body>
   
-<div class="container body-content">
-    {% block content %}{% endblock %}
-</div>
+    <div class="container body-content">
+        {% block content %}{% endblock %}
+    </div>
 
     <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
     <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
     <script src="{% static 'app/scripts/respond.js' %}"></script>
-{% block scripts %}{% endblock %}
+    {% block scripts %}{% endblock %}
 
+    <footer>
+        <p>Sentement Analysis provided by <a href="http://www.alchemyapi.com/">AlchemyAPI</a></p>
+        <h3>Decicated to <a href="http://paulprae.com">Paul Prae</a>, for many years of inspiration and many to come :)</h3>
+    </footer>
 </body>
 </html>
-<script src="../../js/controller.js"></script>

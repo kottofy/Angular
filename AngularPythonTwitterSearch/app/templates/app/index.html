@@ -10,19 +10,11 @@
 
 {% for tweet in tweets %}
 <div class="row">
-    <p>{{tweet.text}}</p>
+    <h3>@{{tweet.username}}</h3>
+    <h4>{{tweet.score}}</h4>
+    <p>{{tweet.tweet}}</p>
+
 </div>
 {% endfor %}
-
-{% for score in scores %}
-<div class="row">
-    <p>score: {{score}}</p>
-</div>
-{% endfor %}
-
-
-<footer>
-    <p>Sentement Analysis provided by <a href="http://www.alchemyapi.com/">AlchemyAPI</a></p>
-</footer>
 
 {% endblock %}
