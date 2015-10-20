@@ -1,10 +1,10 @@
-"""
+﻿"""
 Definition of urls for AngularPythonTwitterSearch.
 """
 
 from datetime import datetime
 from django.conf.urls import patterns, url
-from app.forms import BootstrapAuthenticationForm
+from app.forms import BootstrapAuthenticationForm, SearchForm
 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
@@ -13,7 +13,7 @@ from app.forms import BootstrapAuthenticationForm
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'app.views.home', name='home'),
+    url(r'^$', 'app.views.search', name='searchform'),
     url(r'^contact$', 'app.views.contact', name='contact'),
     url(r'^about', 'app.views.about', name='about'),
     url(r'^login/$',

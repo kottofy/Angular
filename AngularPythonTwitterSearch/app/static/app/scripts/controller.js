@@ -1,6 +1,4 @@
-﻿
-
-(function () {
+﻿(function () {
 
     var app = angular.module('searchTwitter', []);
 
@@ -18,11 +16,11 @@
     app.directive('searchform', function () {
         return {
             restrict: 'E', //new element
-            templateUrl: '../forms/searchform.html'
+            templateUrl: 'searchform'
         };
     });
 
 
 
-}());
+})();
 

@@ -6,6 +6,7 @@
     <RootNamespace>AngularPythonTwitterSearch</RootNamespace>
     <InterpreterId>{56c2dcbf-51a4-420a-9ddd-3083e894a8ab}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
+    <NameOfLastUsedPublishProfile>kristinottofytwitterwatson</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -62,7 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\forms\searchform.html" />
-    <Content Include="app\js\controller.js" />
+    <Content Include="app\static\app\scripts\controller.js" />
+    <None Include="kristinottofytwitterwatson.pubxml" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
