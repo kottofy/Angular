@@ -14,10 +14,10 @@
 
     <div class="row-fluid">
     {% for tweet in tweets %}
-        <div class="col-lg-3">
-        <h3>@{{tweet.username}}</h3>
-        <h4>Sentiment Score: {{tweet.score}}</h4>
-        <p>{{tweet.tweet}}</p>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 tweet-content">
+                <h3>@{{tweet.username}}</h3>
+                <h4>Sentiment Score: {{tweet.score}}</h4>
+                <p>{{tweet.tweet}}</p>
             </div>
     {% endfor %}
         

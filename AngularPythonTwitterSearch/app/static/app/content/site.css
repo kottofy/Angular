@@ -1,4 +1,16 @@
-﻿.footer-content {
+﻿@media (min-width: 1200px) {
+    .tweet-content {
+        height: 125px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .tweet-content {
+        height: 150px;
+    }
+}
+
+.footer-content {
     text-align: center !important;
 }
 
